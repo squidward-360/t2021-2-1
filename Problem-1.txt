@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Problem1 {
+
+	public static void main(String[] args) {
+		// Creating a scanner class to take user input
+		Scanner sc = new Scanner(System.in);
+		// Enter first user input for datatype double
+		System.out.println("Enter 1st number:");
+		double a = sc.nextDouble();
+		// Enter second user input for datatype double
+		System.out.println("Enter 2nd number:");
+		double b = sc.nextDouble();
+		// Enter Type of operation you want to perform for String datatype
+		System.out.println("Enter Type Of Operation");
+		String typeOfOperation = sc.next();
+		// Applying a switch case for individual operation
+		 switch(typeOfOperation) {
+		 // Case 1 for Addition : 
+         case "+" :
+         System.out.println("Sum of the given two numbers: "+ (a+b));
+         break;
+         // Case 2 for Subtraction :
+         case "-" :
+         System.out.println("Difference between the two numbers: "+ (a-b));
+         break;
+         // Case 3 for Multiplication :
+         case "*" :
+         System.out.println("Product of the two numbers: "+ (a*b));
+         break;
+         // Case 4 for Division :
+         case "/" :
+         System.out.println("Result of the division: "+ (a/b));
+         break;
+         // Default case if any invalid operator is entered
+         default :
+         System.out.println("Invalid Input");
+      }
+
+	}
+
+}
