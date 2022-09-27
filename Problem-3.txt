@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Problem3 {
+
+	public static void main(String[] args) {
+		// Creating a scanner class for taking user input
+
+		Scanner sc = new Scanner(System.in);
+		// Enter a value of "a" :
+		System.out.println("Enter the value of a: " );
+		int a = sc.nextInt();
+		int arr[] = new int[a];
+		int index = 0 , temp = 1;
+		// For value of a we are displaying equal number of odd values : 
+		System.out.print("Output: ");
+		// If we give input as an even value then that number should decrement by 1
+		if(a%2==0)
+		{
+			a--;
+		}
+		// while loop will break when input value will be greater than index value
+		while( a > index)
+		{
+			// if loop to enter odd values inside array  
+			if(temp % 2 != 0)
+			{
+				arr[index] = temp;
+				index = index + 1;
+
+			}		
+			temp = temp + 1;
+		}
+		// for each element of array print the value of i
+		for(int i: arr)
+		{
+			System.out.print(i + ","); 
+		}
+
+	}
+
+	
+}
+/* O/P :- Enter the value of a: 
+5
+Output: 1,3,5,7,9,
+*/
